@@ -1,5 +1,5 @@
 const allowedOrigins =[
-    'http://localhost:30000',
+    'http://localhost:3000',
     
 ]
 

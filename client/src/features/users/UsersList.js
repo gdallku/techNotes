@@ -1,4 +1,4 @@
-import { useGetUsersQuery } from "./userApiSlice"
+import { useGetUsersQuery } from "./usersApiSlice"
 import User from './User'
 
 const UsersList = () => {
@@ -9,7 +9,11 @@ const UsersList = () => {
         isSuccess,
         isError,
         error
-    } = useGetUsersQuery()
+    } = useGetUsersQuery(undefined,{
+        pollingInterval:60000,
+        refetchOnFocus:true,
+        refetchOnMountOrArgChange:true
+    })
 
     let content
 
